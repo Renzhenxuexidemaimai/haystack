@@ -23,7 +23,7 @@ logging.getLogger('elasticsearch').setLevel(logging.WARNING)
 
 # Resources / Computation
 USE_GPU = os.getenv("USE_GPU", "True").lower() == "true"
-MAX_PROCESSES = int(os.getenv("MAX_PROCESSES", 4))
+NUM_PROCESSES = int(os.getenv("NUM_PROCESSES", 4))
 BATCHSIZE = int(os.getenv("BATCHSIZE", 50))
 
 # DB
@@ -75,7 +75,7 @@ if READER_MODEL_PATH:
                         context_window_size=CONTEXT_WINDOW_SIZE,
                         top_k_per_candidate=TOP_K_PER_CANDIDATE,
                         no_ans_boost=NO_ANS_BOOST,
-                        max_processes=MAX_PROCESSES,
+                        num_processes=NUM_PROCESSES,
                         max_seq_len=MAX_SEQ_LEN,
                         doc_stride=DOC_STRIDE)
 else:

@@ -68,7 +68,6 @@ class TransformersReader:
         :param meta_data_paragraphs: list of dicts containing meta data for the paragraphs.
                                      len(paragraphs) == len(meta_data_paragraphs)
         :param top_k: the maximum number of answers to return
-        :param max_processes: max number of parallel processes
         :return: dict containing question and answers
 
         """
